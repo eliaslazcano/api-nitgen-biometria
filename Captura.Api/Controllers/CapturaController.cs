@@ -105,32 +105,29 @@ namespace Captura.Api.Controllers
 
             //Alimenta a memória com os cadastros recebidos
             s = indexSearch.InitEngine();
-            if (s != NBioAPI.Error.NONE) {
-                if (s == NBioAPI.Error.INDEXSEARCH_INIT_FAIL) throw new Exception("Ocorreu uma falha ao tentar iniciar o motor de busca das digitais");
-                else throw new Exception("Ocorreu uma falha ao tentar executar o motor de busca das digitais. Erro n" + s);
-            }
-            s = indexSearch.ClearDB();
-            if (s != NBioAPI.Error.NONE) {
-                if (s == NBioAPI.Error.INDEXSEARCH_INIT_FAIL) throw new Exception("Ocorreu uma falha ao tentar iniciar o motor de busca das digitais (2)");
-                else throw new Exception("Ocorreu uma falha ao tentar limpar memória do leitor antes de registrar novas digitais. Erro n" + s);
-            }
+            uint dataCount;
+            indexSearch.GetDataCount(out dataCount);
+            System.Diagnostics.Debug.WriteLine("dataCount" + dataCount);
+
             usuarios.ForEach(x => {
                 //Converte a digital recebida
                 NBioAPI.Type.FIR_TEXTENCODE textoFIR = new NBioAPI.Type.FIR_TEXTENCODE();
                 textoFIR.TextFIR = x.digital;
                 s = indexSearch.AddFIR(textoFIR, x.id, out fpInfoArray);
-                if (s != NBioAPI.Error.NONE) throw new Exception("Ocorreu uma falha ao tentar carregar uma das digitais da base de dados. Usuario cod.: " + x.id + ". Erro n" + s);
+                if (s != NBioAPI.Error.NONE) throw new Exception("Ocorreu uma falha ao tentar carregar uma das digitais da base de dados. Usuario cod.: " + x.id + ". Erro n" + s + "|" + NBioAPI.Error.GetErrorDescription(s));
             });
 
             //Realiza a captura
             NBioAPI.Type.HFIR capturaHFIR;
             s = nBioAPI.OpenDevice(NBioAPI.Type.DEVICE_ID.AUTO);
             if (s != NBioAPI.Error.NONE) throw new Exception("Não foi possível inicializar o leitor de digital. Erro n" + s);
+
             s = nBioAPI.Capture(out capturaHFIR);
             if (s != NBioAPI.Error.NONE) {
                 if (s == NBioAPI.Error.USER_CANCEL) return null; //O usuario cancelou a leitura
                 throw new Exception("Ocorreu uma falha na leitura da digital. Erro n" + s);
             }
+
             s = nBioAPI.CloseDevice(NBioAPI.Type.DEVICE_ID.AUTO);
             if (s != NBioAPI.Error.NONE) throw new Exception("Não foi possível auto-desligar o leitor de digital após escanear. Erro n" + s);
             if (capturaHFIR == null) return null;
@@ -142,22 +139,18 @@ namespace Captura.Api.Controllers
 
             //Realizando a busca
             s = indexSearch.IdentifyData(capturaHFIR, NBioAPI.Type.FIR_SECURITY_LEVEL.HIGH, out fpInfo, cbInfo0);
-            //indexSearch.TerminateEngine(); - Descobri que isso estava causando erro na busca porque ela eh assincrona e essa coisa encerrava o motor de busca antes da hora
+            indexSearch.ClearDB();
+            indexSearch.TerminateEngine();
             if (s != NBioAPI.Error.NONE)
             {
                 if (s == NBioAPI.Error.INDEXSEARCH_IDENTIFY_FAIL) return 0; //Nao encontrou
-                if (s == NBioAPI.Error.INDEXSEARCH_INIT_FAIL) throw new Exception("Ocorreu uma falha ao tentar executar o motor de busca das digitais conhecidas");
-                else if (s == NBioAPI.Error.INDEXSEARCH_IDENTIFY_STOP) throw new Exception("Parace que a comparação das digitais foi cancelada pelo hardware");
-                else throw new Exception("Ocorreu uma falha ao realizar a comparação da digital com todas as outras. Erro n" + s);
+                else throw new Exception(NBioAPI.Error.GetErrorDescription(s));
             }
-            return (int) fpInfo.ID;
+            return (int) fpInfo.ID; //Sucesso, retorna o ID
         }
 
         public uint myCallback(ref NBioAPI.IndexSearch.CALLBACK_PARAM_0 cbParam0, IntPtr userParam)
         {
-            Console.WriteLine(cbParam0.ToString());
-            Console.WriteLine(userParam);
-            //progressIdentify.Value = Convert.ToInt32(cbParam0.ProgressPos);
             return NBioAPI.IndexSearch.CALLBACK_RETURN.OK;
         }
 
