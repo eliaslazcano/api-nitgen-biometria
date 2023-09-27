@@ -69,6 +69,12 @@ D:\FingerDSV\FingerCaptura\Captura.Local\obj\Debug\Captura.Local.Properties.Reso
 D:\FingerDSV\FingerCaptura\Captura.Local\obj\Debug\Captura.Local.csproj.GenerateResource.Cache
 D:\FingerDSV\FingerCaptura\Captura.Local\obj\Debug\Captura.Local.exe
 D:\FingerDSV\FingerCaptura\Captura.Local\obj\Debug\Captura.Local.pdb
+D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Local\obj\Debug\Captura.Local.csproj.AssemblyReference.cache
+D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Local\obj\Debug\Captura.Local.csproj.SuggestedBindingRedirects.cache
+D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Local\obj\Debug\Captura.Local.Form1.resources
+D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Local\obj\Debug\Captura.Local.Properties.Resources.resources
+D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Local\obj\Debug\Captura.Local.csproj.GenerateResource.cache
+D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Local\obj\Debug\Captura.Local.csproj.CoreCompileInputs.cache
 D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Local\bin\Debug\Fingertech Web.exe.config
 D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Local\bin\Debug\Fingertech Web.exe
 D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Local\bin\Debug\Fingertech Web.pdb
@@ -98,13 +104,7 @@ D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Lo
 D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Local\bin\Debug\System.Web.Http.Owin.xml
 D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Local\bin\Debug\System.Net.Http.Formatting.xml
 D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Local\bin\Debug\Newtonsoft.Json.xml
-D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Local\obj\Debug\Captura.Local.csproj.AssemblyReference.cache
-D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Local\obj\Debug\Captura.Local.csproj.SuggestedBindingRedirects.cache
 D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Local\obj\Debug\Fingertech Web.exe.config
-D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Local\obj\Debug\Captura.Local.Form1.resources
-D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Local\obj\Debug\Captura.Local.Properties.Resources.resources
-D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Local\obj\Debug\Captura.Local.csproj.GenerateResource.cache
-D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Local\obj\Debug\Captura.Local.csproj.CoreCompileInputs.cache
 D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Local\obj\Debug\Captura.Local.csproj.CopyComplete
 D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Local\obj\Debug\Fingertech Web.exe
 D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Local\obj\Debug\Fingertech Web.pdb

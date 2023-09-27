@@ -53,6 +53,8 @@ D:\FingerDSV\FingerCaptura\Captura.Api\bin\System.Web.Http.xml
 D:\FingerDSV\FingerCaptura\Captura.Api\bin\System.Web.Http.WebHost.xml
 D:\FingerDSV\FingerCaptura\Captura.Api\obj\Debug\Captura.Api.dll
 D:\FingerDSV\FingerCaptura\Captura.Api\obj\Debug\Captura.Api.pdb
+D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Api\obj\Debug\Captura.Api.csproj.AssemblyReference.cache
+D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Api\obj\Debug\Captura.Api.csproj.CoreCompileInputs.cache
 D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Api\bin\Captura.Api.dll.config
 D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Api\bin\Captura.Api.dll
 D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Api\bin\Captura.Api.pdb
@@ -78,8 +80,6 @@ D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Ap
 D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Api\bin\System.Net.Http.Formatting.xml
 D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Api\bin\System.Web.Http.xml
 D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Api\bin\System.Web.Http.WebHost.xml
-D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Api\obj\Debug\Captura.Api.csproj.AssemblyReference.cache
-D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Api\obj\Debug\Captura.Api.csproj.CoreCompileInputs.cache
 D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Api\obj\Debug\Captura.Api.csproj.CopyComplete
 D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Api\obj\Debug\Captura.Api.dll
 D:\Biblioteca\Downloads\biometria\FingertechWeb\Desktop\FingerCaptura\Captura.Api\obj\Debug\Captura.Api.pdb
