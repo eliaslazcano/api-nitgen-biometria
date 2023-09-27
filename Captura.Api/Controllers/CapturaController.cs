@@ -141,8 +141,8 @@ namespace Captura.Api.Controllers
             cbInfo0.CallBackFunction = new NBioAPI.IndexSearch.INDEXSEARCH_CALLBACK(myCallback);
 
             //Realizando a busca
-            s = indexSearch.IdentifyData(capturaHFIR, NBioAPI.Type.FIR_SECURITY_LEVEL.NORMAL, out fpInfo, cbInfo0);
-            indexSearch.TerminateEngine();
+            s = indexSearch.IdentifyData(capturaHFIR, NBioAPI.Type.FIR_SECURITY_LEVEL.HIGH, out fpInfo, cbInfo0);
+            //indexSearch.TerminateEngine(); - Descobri que isso estava causando erro na busca porque ela eh assincrona e essa coisa encerrava o motor de busca antes da hora
             if (s != NBioAPI.Error.NONE)
             {
                 if (s == NBioAPI.Error.INDEXSEARCH_IDENTIFY_FAIL) return 0; //Nao encontrou
