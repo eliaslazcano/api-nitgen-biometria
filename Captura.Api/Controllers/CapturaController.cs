@@ -93,6 +93,28 @@ namespace Captura.Api.Controllers
             return resultado;
         }
 
+        [HttpGet]
+        [Route("Compare")]
+        public bool Compare(string digital)
+        {
+            //Converte a digital recebida
+            NBioAPI.Type.FIR_TEXTENCODE textoFIR = new NBioAPI.Type.FIR_TEXTENCODE();
+            textoFIR.TextFIR = digital.ToString();
+
+            //Realiza a captura
+            NBioAPI nBioAPI = new NBioAPI();
+            NBioAPI.Type.HFIR capturaHFIR;
+            nBioAPI.OpenDevice(NBioAPI.Type.DEVICE_ID.AUTO);
+            nBioAPI.Capture(out capturaHFIR);
+            nBioAPI.CloseDevice(NBioAPI.Type.DEVICE_ID.AUTO);
+
+            //Realiza a comparacao
+            bool resultado;
+            nBioAPI.VerifyMatch(capturaHFIR, textoFIR, out resultado, new NBioAPI.Type.FIR_PAYLOAD());
+
+            return resultado;
+        }
+
         [HttpPost]
         [Route("Identificar")]
         public int? Identificar(List<Usuario> usuarios)
